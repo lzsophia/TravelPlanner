@@ -12,10 +12,7 @@ class Plan extends Component {
                     <DayChoose/>
                 </form>
                 <div className="list-group">
-                    <PlaceAbrv name={'Place1'}  day={'day1'} address ={'Maecenas sed diam eget risus varius blandit.'} description={'Donec id elit non mi porta.'} />
-                    <PlaceAbrv name={'Place2'}  day={'day2'} address ={'Maecenas sed diam eget risus varius blandit.'} description={'Donec id elit non mi porta.'} />
-                    <PlaceAbrv name={'Place3'}  day={'day3'} address ={'Maecenas sed diam eget risus varius blandit.'} description={'Donec id elit non mi porta.'} />
-                    <PlaceAbrv name={'Place4'}  day={'day4'} address ={'Maecenas sed diam eget risus varius blandit.'} description={'Donec id elit non mi porta.'} />
+                    {this.props.planList.map((planItem)=><PlaceAbrv name={planItem.name}  day={planItem.day} address ={planItem.address} description={planItem.description} />)}
                 </div>
                 <button type="button" className="btn btn-primary mt-5 float-right">Clean</button>
             </div>
